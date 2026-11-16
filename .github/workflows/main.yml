@@ -15,6 +15,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: "printing files after"
         run: ls
+      - name: "docker login"
+        run: docker login --username ${{ secrets.DOCKER_USERNAME}} --password ${{ secrets.DOCKER_TOKEN}}
 
 
 
