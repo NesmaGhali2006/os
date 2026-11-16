@@ -1,1 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "printing path"
+        run: pwd
+      - name: "printing name"
+        run: echo Nesma Ghali
+      - name: "printing files before"
+        run: ls
+      - uses: actions/checkout@v3
+      - name: "printing files after"
+        run: ls
+
+
 
